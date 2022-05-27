@@ -1,7 +1,6 @@
 package com.training.payroll.model;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.Objects;
 import java.util.UUID;
@@ -9,9 +8,8 @@ import java.util.UUID;
 @Entity
 public class Employee {
 
-    // TODO change to uuid
     @Id
-    private String id = UUID.randomUUID().toString();;
+    private String id = UUID.randomUUID().toString();
     private String name;
     private String role;
 
