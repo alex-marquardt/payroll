@@ -4,13 +4,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.Objects;
+import java.util.UUID;
 
 @Entity
 public class Employee {
 
     // TODO change to uuid
-    private @Id
-    @GeneratedValue Long id;
+    @Id
+    private String id = UUID.randomUUID().toString();;
     private String name;
     private String role;
 
@@ -22,11 +23,11 @@ public class Employee {
         this.role = role;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
